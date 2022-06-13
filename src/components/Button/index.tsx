@@ -26,11 +26,13 @@ export const Button: React.FC<ButtonProps> = ({
 			iconPosition={iconPosition}
 			{...props}
 		>
-			{(icon && iconPosition === "centeredLeft") ||
-				(iconPosition === "left" && icon)}
+			{(iconPosition === "left" || iconPosition === "centeredLeft") &&
+				icon &&
+				icon}
 			<span>{children}</span>
-			{(icon && iconPosition === "centeredRight") ||
-				(iconPosition === "right" && icon)}
+			{(iconPosition === "right" || iconPosition === "centeredRight") &&
+				icon &&
+				icon}
 		</StyleButton>
 	);
 };

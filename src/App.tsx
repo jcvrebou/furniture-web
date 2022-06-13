@@ -5,7 +5,7 @@ import { Button } from "./components/Button";
 function App() {
 	return (
 		<div className="App">
-			<Button size="large" styleVariation="primary" icon={<AddIcon />} iconPosition="right">
+			<Button size="small" styleVariation="primary" icon={<AddIcon />} iconPosition='centeredRight'>
 				Teste
 			</Button>
 		</div>

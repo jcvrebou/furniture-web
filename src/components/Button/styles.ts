@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import styled from "styled-components";
 
 interface ButtonProps {
@@ -32,11 +31,14 @@ export const StyleButton = styled.button<ButtonProps>`
 	color: #212121;
 	cursor: pointer;
 	
+	span {
+		margin-left: ${({ iconPosition }) =>  iconPosition === "right" && "auto"};
+		margin-right: ${({ iconPosition }) =>  iconPosition === "left" && "auto"};
+	}
+
 	svg {
-		/* font-size: ${({ size }) => (size === "large" ? "16px" : "14px")}; */
-		justify-self: flex-end;
-		align-self: flex-end;
-		
+		margin-left: ${({ iconPosition }) =>  iconPosition === "right" && "auto"};
+		margin-right: ${({ iconPosition }) =>  iconPosition === "left" && "auto"};
 	}
 
 	&:disabled {
